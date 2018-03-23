@@ -36,8 +36,8 @@ foreach ($arrAll as $key => $val) {
      var_dump($arrAll[$cat]);
      foreach ($arrAll[$cat] as $key => $val){
 //         var_dump($arrAll[$cat][$key]);   
-        var_dum($arrAll[$cat][$key]);    
-//        echo"<img src='sop/ver01/$cat$arrAll[$cat].svg'  alt='$cat$arrAll[$cat].svg'>"; 
+        print_r($arrAll[$cat][$key]);    
+//        echo"<img src='sop/ver01/$cat$arrAll[$cat][1].svg' >"; 
      }
 
 }
