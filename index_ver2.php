@@ -6,18 +6,23 @@
 
 </div>
 <?php
-class zt {
-        static public function initVarWithDefaultVal($var, $value) {
-        if (isset($_GET[$var])) {
-            return $_GET[$var];
-        }
-        return $value;
-    }
-}
-//$cat =array();
-$cat= zt::initVarWithDefaultVal('cat', 'ABM');
-$arrABM = array('001', '002', '003', '004', '005', '006', '007', '008', '009');
 
+$cat =array();
+$arrdept=array('SG','KQ','ZZ','JG','YZ','SY','GC','CG','MJ','CW','ZC','YW');
+$arrDept['SG']='生管';
+$arrDept['KQ']='烤漆';
+$arrDept['ZZ']='组装';
+$arrDept['JG']='加工';
+$arrDept['YZ']='压铸';
+$arrDept['SY']='素研';
+$arrDept['GC']='工程';
+$arrDept['CG']='采购';
+$arrDept['MJ']='模具';
+$arrDept['CW']='财务';
+$arrDept['ZC']='资材';
+$arrDept['YW']='业务';
+//var_dump($arrdept);
+$arrABM = array('001', '002', '003', '004', '005', '006', '007', '008', '009');
 $arrAIC = array('001', '002', '003', '004');
 $arrAIM = array('001', '002', '003', '004');
 $arrAIN = array('001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '024');
@@ -39,26 +44,29 @@ $arrAll["AXM"] = $arrAXM;
 $arrAll["SOP_APS"] = $arrSOP_APS;
 //var_dump($arrABM);
 echo "<div class='container-fluid'>";
-
-
 foreach ($arrAll as $key => $val) {
-//     echo "<h2>$key</h2>"; 
-if($cat=='ABM'){
-    foreach ($arrAll[$cat] as $key => $value) {
-        echo "<h3>$cat</h3>";
-      echo"<img src='sop/ver01/$cat$value.svg' alt='$cat$value.svg'>";  
-      echo "<hr>";
-    }
-}
-else {
-    foreach ($arrAll[$cat] as $key => $value) {
-        echo "<h3>$cat</h3>";
-      echo"<img src='sop/ver01/$cat$value.svg' alt='$cat$value.svg'>";  
-      echo "<hr>";
-    }
-}
-}
+     echo "<h2>$key</h2>"; 
+     $cat=$key;
+//     var_dump($cat);
+     var_dump($arrAll[$cat]);
+     foreach ($arrAll[$cat] as $key => $val){
+//         var_dump($arrAll[$cat][$key]);   
+        print_r($arrAll[$cat][$key]);    
+//        echo"<img src='sop/ver01/$cat$arrAll[$cat][1].svg' >"; 
+     }
 
+}
+foreach ($arrAll as $key => $val) {
+
+    echo "<h2>$key</h2>";
+    
+    foreach ($val as $key2 => $val2) {
+
+        echo "<h3>$key$val2</h3>";
+        echo"<img src='sop/ver01/$key$val2.svg' alt='$key$val2.svg'>";
+        echo "<hr>";
+    }
+} 
 
 echo "</div>";
 ?>

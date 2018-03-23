@@ -41,10 +41,16 @@
                             <div class="dropdown-menu" aria-labelledby="themes">
                                 <!--<a class="dropdown-item" href="a25.php?&index_dept=%E5%88%B6%E9%80%A0&index_cat=%EF%BC%88%E5%9B%9B%EF%BC%89">制造</a>-->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index_abm.php">1. ABM</a>
-                                <a class="dropdown-item" href="index_aic.php">2. AIC</a>
-                                <a class="dropdown-item" href="index_aim.php">3. AIM</a>
-                         
+                                <a class="dropdown-item" href="index.php?cat=ABM">1. ABM</a>
+                                <a class="dropdown-item" href="index.php?cat=AIC">2. AIC</a>
+                                <a class="dropdown-item" href="index.php?cat=AIM">3. AIM</a>
+                                <a class="dropdown-item" href="index.php?cat=AIN">4. AIN</a>
+                                <a class="dropdown-item" href="index.php?cat=AMR">5. AMR</a>
+                                <a class="dropdown-item" href="index.php?cat=AQC">6. AQC</a>
+                                <a class="dropdown-item" href="index.php?cat=ASF">7. ASF</a>
+                                <a class="dropdown-item" href="index.php?cat=ASF">8. ASF</a>
+                                <a class="dropdown-item" href="index.php?cat=AXM">9. AXM</a>
+                                <a class="dropdown-item" href="index.php?cat=SOP_APS">10. SOP_APS</a>
                             </div>
                         </li>
 
