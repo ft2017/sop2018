@@ -3,25 +3,56 @@
 
 <div class="container-fluid">
     <h1>FT SOP 版本1 最后更新日期2017-03-27</h1>
-    
+
 </div>
 <?php
-$cat="ABM";
-$arrABM=array('001','002','003');
-$arrAIM=array('001','002','003');
-$arrAIC=array('001','002','003');
-$arrAll["ABM"]=$arrABM;
-$arrAll["AIM"]=$arrAIM;
-$arrAll["AIC"]=$arrAIC;
+$cat =array();
+$arrABM = array('001', '002', '003', '004', '005', '006', '007', '008', '009');
+
+$arrAIC = array('001', '002', '003', '004');
+$arrAIM = array('001', '002', '003', '004');
+$arrAIN = array('001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '024');
+$arrAMR = array('001', '002', '003', '004', '005', '006', '007');
+$arrAPM = array('001', '002', '003', '004', '005', '006-A', '006-B', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028');
+$arrAQC = array('001', '002', '003', '004', '005', '006', '008');
+$arrASF = array('001', '002-1', '002-1_工艺委外申请流程BPM', '002', '003', '004', '005', '006', '007', '007_工单倒扣发料流程', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '020_工单工艺变更流程（BPM)', '021', '022', '023');
+$arrAXM = array('001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030');
+$arrSOP_APS = array('001_MDS计算流程', '002_产能规画计算流程');
+$arrAll["ABM"] = $arrABM;
+$arrAll["AIM"] = $arrAIM;
+$arrAll["AIC"] = $arrAIC;
+$arrAll["AIN"] = $arrAIN;
+$arrAll["AMR"] = $arrAMR;
+$arrAll["APM"] = $arrAPM;
+$arrAll["AQC"] = $arrAQC;
+$arrAll["AXM"] = $arrAXM;
+$arrAll["SOP_APS"] = $arrSOP_APS;
 //var_dump($arrABM);
+echo "<div class='container-fluid'>";
 foreach ($arrAll as $key => $val) {
-    echo "<h2>$key</h2>";
-    foreach ($val as $key2 => $val2) {
-   
-    echo "<h3>$key$val2</h3>";
-    echo"<img src='sop/ver01/$key$val2.svg' >";
-     echo "<hr>";
-    }
+     echo "<h2>$key</h2>"; 
+     $cat=$key;
+//     var_dump($cat);
+     var_dump($arrAll[$cat]);
+     foreach ($arrAll[$cat] as $key => $val){
+//         var_dump($arrAll[$cat][$key]);   
+        var_dum($arrAll[$cat][$key]);    
+//        echo"<img src='sop/ver01/$cat$arrAll[$cat].svg'  alt='$cat$arrAll[$cat].svg'>"; 
+     }
+
 }
+foreach ($arrAll as $key => $val) {
+
+    echo "<h2>$key</h2>";
+    
+    foreach ($val as $key2 => $val2) {
+
+        echo "<h3>$key$val2</h3>";
+        echo"<img src='sop/ver01/$key$val2.svg' alt='$key$val2.svg'>";
+        echo "<hr>";
+    }
+} 
+
+echo "</div>";
 ?>
 <?php require 'index_footer.php'; ?>
